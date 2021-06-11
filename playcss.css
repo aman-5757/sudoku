@@ -1,0 +1,116 @@
+*{
+    font-family: 'Do Hyeon', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+.play-container{
+    display: flex;
+    height: 100vh;
+}
+.tools{
+    border: 1px solid red;
+    min-width: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
+}
+.play-area{
+    border: 1px solid green;
+    width: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    /* margin: 8px;    can be removed */
+    background-image: url("./jc-gellidon-0jSZu_eTjXg-unsplash.jpg"); 
+    
+}
+table{
+    margin-top: 15px;
+}
+.options{
+    cursor: pointer;
+}
+.options img{
+    height: 3rem;
+}
+.btns{
+    border: 2px solid black;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 28px;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* expt */
+
+
+.cell
+{
+    width:45px;
+    height: 45px;
+    border: 1px solid black;
+    display: flex;
+    overflow: auto;
+    outline: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+.boxes{
+    display: flex;
+    margin-top: 1rem;
+    border: 4px solid black;
+
+}
+.boxes input{
+    width: 44px;
+    border: none;
+}
+
+.brdright{
+    border-right: 30px solid red;
+}
+
+/* expt on real sudoku */
+
+.cells{
+    display: flex;
+    width: 400px;
+    border: 4px solid purple;
+}
+.l-btn{
+    height: 4rem;
+}
+.hide{
+    display: none;
+}
+
+.blue{
+    background: lightskyblue;
+}
+
+.redB{
+    border-right: 4px solid red;
+}
+.redBB{
+    border-top: 4px solid red;
+}
+
+
+
+/* timer */
+.timer{
+    margin-left: 750px;
+}

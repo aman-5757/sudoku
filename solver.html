@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="./playcss.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="play-container">
+        <div class="tools">
+            <div class="options" id="home">
+                <img src="./home.png" alt="">
+            </div>
+            <div class="options" id="github">
+                <img src="./github.png" alt="">
+            </div>
+            <div class="options" id="linkedin">
+                <img src="./linkedin.png" alt="">
+            </div>
+        </div>
+        <div class="play-area">
+            <h2>PROVIDE INPUT THEN PRESS GET SOLUTION BUTTON</h2>
+            <div class="boxes">
+                <div class="col">
+                    <div class="cell" r="0" c="0" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="0" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="0" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="0" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="0" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="0" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="0" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="0" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="0" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell" r="0" c="1" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="1" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="1" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="1" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="1" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="1" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="1" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="1" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="1" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell redB" r="0" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB" r="1" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB" r="2" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB redBB" r="3" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB" r="4" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB" r="5" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB redBB" r="6" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB" r="7" c="2" contentEditable='true'>.</div>
+                    <div class="cell redB" r="8" c="2" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell" r="0" c="3" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="3" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="3" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="3" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="3" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="3" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="3" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="3" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="3" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell" r="0" c="4" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="4" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="4" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="4" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="4" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="4" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="4" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="4" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="4" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell redB" r="0" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB" r="1" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB" r="2" c="5" contentEditable='true'>.</div>
+                    <div class="cell redBB redB" r="3" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB" r="4" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB" r="5" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB redBB" r="6" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB" r="7" c="5" contentEditable='true'>.</div>
+                    <div class="cell redB" r="8" c="5" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell" r="0" c="6" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="6" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="6" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="6" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="6" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="6" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="6" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="6" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="6" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell" r="0" c="7" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="7" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="7" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="7" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="7" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="7" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="7" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="7" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="7" contentEditable='true'>.</div>
+                </div>
+                <div class="col">
+                    <div class="cell" r="0" c="8" contentEditable='true'>.</div>
+                    <div class="cell" r="1" c="8" contentEditable='true'>.</div>
+                    <div class="cell" r="2" c="8" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="3" c="8" contentEditable='true'>.</div>
+                    <div class="cell" r="4" c="8" contentEditable='true'>.</div>
+                    <div class="cell" r="5" c="8" contentEditable='true'>.</div>
+                    <div class="cell redBB" r="6" c="8" contentEditable='true'>.</div>
+                    <div class="cell" r="7" c="8" contentEditable='true'>.</div>
+                    <div class="cell" r="8" c="8" contentEditable='true'>.</div>
+                </div>
+            </div>
+            <!-- <div class="cells-content"></div> -->
+                
+        </div>
+
+        <div class="tools">
+            <div class="options btns l-btn" id="reset-btn">
+                Reset Board
+            </div>
+            <div class="options btns l-btn hide" id="validate-btn">
+                Check Validity
+            </div>
+            <div class="options btns l-btn" id="solution">
+                Get Solution
+            </div>
+            <div class="options btns l-btn hide" id="reset-que">
+                Reset Board
+            </div>
+            <div class="options btns l-btn hide" id="travel-sol">
+                See Solution
+            </div>
+            <div class="options btns l-btn hide" id="submit">
+                Submit
+            </div>
+            <div class="options btns l-btn hide" id="new-game">
+                New Game
+            </div>
+        </div>
+
+    </div>
+    <script src="nav.js"></script>
+    <script src="valid.js"></script>
+    <script src="solver.js"></script>
+    <!-- <script src="./playjs.js"></script> -->
+
+</body>
+</html>
